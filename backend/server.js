@@ -49,6 +49,13 @@ app.get('/api/health', (req, res) => {
   res.json({ status: 'ok', message: 'CompareX API is running' });
 });
 
+app.get('/', (req, res) => {
+  res.json({
+    success: true,
+    message: 'CompareX Backend Running',
+  });
+});
+
 app.use('/api/auth', authRoutes);
 app.use('/api/comparisons', comparisonRoutes);
 app.use('/api/products', productRoutes);
